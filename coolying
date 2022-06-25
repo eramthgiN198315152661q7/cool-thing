@@ -1,0 +1,16 @@
+	local HttpService = game:GetService("HttpService")
+	local result = HttpService:GenerateGUID(true)
+		mouse = game.Players.LocalPlayer:GetMouse()
+		tool = Instance.new("Tool")
+		tool.RequiresHandle = false
+		tool.Name = 'Server Attack Stealer '.. result
+		tool.Activated:connect(function()
+			local pos = mouse.Hit+Vector3.new(0,2.5,0)
+	
+			for Index, Value in next, game:GetDescendants() do
+				if Value:IsA("RemoteEvent") then
+					Value:FireServer(pos.X,pos.Y,pos.Z);
+				end;
+			end;
+		end)
+		tool.Parent = game.Players.LocalPlayer.Backpack
