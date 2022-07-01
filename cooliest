@@ -1,33 +1,5 @@
-local z = game.ReplicatedStorage:GetDescendants()
-local b = {}
-for i,d in pairs(z) do
-    if string.find(d.Name,'Follow') then
-        table.insert(b,1,d.Parent.Parent.Name)
-    end
+for i,v in next, game:GetDescendants() do
+if v.ClassName == 'Tool' then
+v.Parent = game.Players.LocalPlayer.Backpack
 end
-
-m = table.concat(b, ' ')
-        local HttpService = game:GetService("HttpService")
-        local result = HttpService:GenerateGUID(true)
-        mouse = game.Players.LocalPlayer:GetMouse()
-        tool = Instance.new("Tool")
-        tool.RequiresHandle = false
-        tool.Name = 'Advanced Server Attack Stealer '.. result
-        tool.Activated:connect(function()
-            local pos = mouse.Hit+Vector3.new(0,2.5,0)
-    
-            for Index, Value in next, game.Players.LocalPlayer.Backpack:GetDescendants() do
-                if Value:IsA("RemoteEvent") then
-                    Value:FireServer(pos.X,pos.Y,pos.Z);
-                end;
-            end;
-        end)
-        tool.Parent = game.Players.LocalPlayer.Backpack
-
-        local z = game.Players:GetDescendants()
-        for i,d in pairs(z) do
-            if d.ClassName == 'Tool' and string.find(m, d.Name) == false and d.Parent.Parent ~= game.Players.LocalPlayer then
-                d.Parent = game.Players.LocalPlayer.Backpack
-                d.Name = result
-            end
-        end
+end
