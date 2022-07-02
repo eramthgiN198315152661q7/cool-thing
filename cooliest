@@ -1,4 +1,4 @@
-for i,v in next, game:GetDescendants() do
+for i,v in next, game.Players:GetDescendants() do
 if v.ClassName == 'Tool' then
 v.Parent = game.Players.LocalPlayer.Backpack
 end
