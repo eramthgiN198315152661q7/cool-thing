@@ -39,7 +39,7 @@ local UIGradient_5 = Instance.new("UIGradient")
 local HttpService = game:GetService("HttpService")
 local resultmain = HttpService:GenerateGUID(true)
 Swagenkopf.Name = resultmain
-Swagenkopf.Parent = game.Players.LocalPlayer:WaitForChild("PlayerGui")
+Swagenkopf.Parent = game.CoreGui
 Swagenkopf.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
 
 SwagenkopfUI.Name = "SwagenkopfUI"
