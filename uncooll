@@ -1,6 +1,6 @@
 local aaa = game:GetService("Players").NewBadPcMan4.PlayerGui.Countdown.Frame.Counter
 while true do wait(0.01)
-if aaa.Text == 0 then wait(0.9) 
+if aaa.Text == "0" then wait(0.9) 
 aaa.Text = "Not enough players."
 end
 end
