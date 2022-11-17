@@ -2,7 +2,8 @@ game.RunService.RenderStepped:Connect(function()
 game:GetService("Players").NewBadPcMan4.PlayerGui.Countdown.Frame.Counter.Visible = true
 local aaa = game:GetService("Players").LocalPlayer.PlayerGui.Countdown.Frame.Counter
 local aab = game:GetService("Players").LocalPlayer.PlayerGui.Countdown.Frame.NEP
-if aaa.Text == "0" then aab.Visible = true
+if aaa.Text == "0" then aab.Visible = true 
+aaa.Visible = false
 aab.Text = "Not Enough Players."
 end
 end)
