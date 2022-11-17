@@ -1,5 +1,4 @@
 game.RunService.RenderStepped:Connect(function()
-game:GetService("Players").NewBadPcMan4.PlayerGui.Countdown.Frame.Counter.Visible = true
 local aaa = game:GetService("Players").LocalPlayer.PlayerGui.Countdown.Frame.Counter
 local aab = game:GetService("Players").LocalPlayer.PlayerGui.Countdown.Frame.NEP
 if aaa.Text == "0" then 
