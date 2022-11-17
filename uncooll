@@ -1,6 +1,6 @@
 game.RunService.RenderStepped:Connect(function()
 local aaa = game:GetService("Players").LocalPlayer.PlayerGui.Countdown.Frame.Counter
-if aaa.Text == "Now Playing: Versus" then 
+if aaa.Text == "0" then wait(0.5)
 aaa.Text = "Not enough players."
 end
 end)
