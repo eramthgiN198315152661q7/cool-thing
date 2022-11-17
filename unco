@@ -1,0 +1,3 @@
+game.RunService.RenderStepped:Connect(function()
+for i,v in pairs(game:GetService("Workspace").Lobby.Queue.Main.SurfaceGui.ScrollingFrame:GetChildren()) do
+if v.Name ~= "NewBadPcMan4" then v:Remove() end end end)
