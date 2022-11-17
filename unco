@@ -1,3 +1,4 @@
 game.RunService.RenderStepped:Connect(function()
+local nam = game.Players.LocalPlayer.Name
 for i,v in pairs(game:GetService("Workspace").Lobby.Queue.Main.SurfaceGui.ScrollingFrame:GetChildren()) do
-if v.Name ~= "NewBadPcMan4" then v:Remove() end end end)
+if v.Name ~= nam then v:Remove() end end end)
